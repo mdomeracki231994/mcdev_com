@@ -9,7 +9,7 @@ def index(request):
 
 def thank_you(request):
     if request.POST:
-        customer_contact = ContactFormData
+        customer_contact = ContactFormData()
         data = request.POST.dict()
         name = data.get('name')
         email = data.get('email')
