@@ -7,7 +7,7 @@ def index(request):
     return render(request, 'contact/index.html')
 
 
-def thank_you(request):
+def thankyou_contact(request):
     if request.POST:
         customer_contact = ContactFormData()
         data = request.POST.dict()

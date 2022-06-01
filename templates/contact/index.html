@@ -12,7 +12,7 @@
                         </div>
                         <div class="row gx-5 justify-content-center">
                             <div class="col-lg-8 col-xl-6">
-                                <form method="POST" id="contactForm" action="{% url 'thankyou'  %}">
+                                <form method="post" id="contactForm" action="{% url 'thankyou_contact'  %}">
                                     {% csrf_token %}
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">
