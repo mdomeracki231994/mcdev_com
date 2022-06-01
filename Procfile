@@ -1,1 +1,1 @@
-web: gunicorn mcdev_com.wsgi
+web:gunicorn mcdev_com.wsgi
