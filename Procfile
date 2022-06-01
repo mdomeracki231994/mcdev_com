@@ -1,1 +1,1 @@
-web:gunicorn mcdev_com.wsgi
+web: gunicorn mcdev_com.wsgi:application --log-file - --log-level debug python manage.py collectstatic --noinput manage.py migrate
