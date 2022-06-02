@@ -14,3 +14,5 @@ def thankyou(request):
         newsletter_contact.email = user_signup
         newsletter_contact.save()
     return render(request, 'home/thankyou.html')
+
+
