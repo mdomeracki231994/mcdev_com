@@ -1,6 +1,15 @@
-/*Icon styles*/
+/* Icon styles*/
 #icon{
     font-size: 100px;
     margin-top: 10px;
     padding-top: 10px;
+}
+
+/* Home page styles*/
+.bg{
+    background-image: url("../images/home_page_images/tree-1031814_1280.jpeg");
+    height: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
