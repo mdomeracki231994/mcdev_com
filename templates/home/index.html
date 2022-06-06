@@ -2,32 +2,24 @@
 {% block content %}
     {% load static %}
     <!-- Header-->
-    <header class="bg-dark py-5">
-        <div class="container px-5"> -->
-            <div class="row gx-5 align-items-center justify-content-center">
+    <header class="bg py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-lg-start mr-5">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
-                    <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder text-white mb-2">We design and build websites that give your
-                            customers the best experience possible.</h1>
-                        <p class="lead fw-normal text-white-50 mb-4">Quickly design and customize responsive
-                            mobile-first sites with Bootstrap, the world’s most popular front-end open source
-                            toolkit!</p>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
-                            <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
+                    <div class="my-5 text-start">
+                         <h1 class="display-5 fw-bolder text-white">Ready to build a website?</h1>
+                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                            <a class="btn btn-primary btn-lg mt-3" href="{% url 'contact' %}">Get Started</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5"
-                                                                                   src="{% static 'images/home_page_images/keyboard-338505_640.jpeg' %}"
-                                                                                   alt="..."/></div>
             </div>
         </div>
     </header>
     <!-- Features section-->
     <section class="py-5 mt-5" id="features">
         <div class="container px-10 my-10">
-            <div class="row gx-5 justify-content-around">
+            <div class="row gx-1 justify-content-around">
                 <div class="col-lg-8">
                     <div class="row gx-lg-5 row-cols-1 row-cols-lg-3">
                         <div class="col mb-5 h-100">
@@ -90,7 +82,7 @@
     </section>
     <!-- Blog preview section-->
     <section class="py-5">
-        <div class="container px-5 my-5">
+        <div class="container px-5 my-5 mt-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6">
                 </div>
@@ -170,7 +162,7 @@
                         <div class="input-group mb-2">
                             <form method="post" action='{% url 'thankyou' %}'>
                                 {% csrf_token %}
-                                <input name="signup" class="form-control" type="text" placeholder="Email address..."
+                                <input required name="signup" class="form-control" type="text" placeholder="Email address..."
                                        aria-label="Email address..." aria-describedby="button-newsletter"/>
                                 <button class="btn btn-outline-light mt-3" id="button-newsletter" type="submit">Sign
                                     up
