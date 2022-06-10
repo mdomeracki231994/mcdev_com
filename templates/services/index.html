@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row py-5 px-5">
+            <h1 class="text-center py-2 display-4">Our Services</h1>
+            {% for service in context %}
+            <div class="col-md-4 py-4 text-center">
+                  <i class="{{ service.icon }} align-items-center" id="icon"></i>
+                  <h3 class="fw-bolder pt-3">{{ service.title }}</h3>
+                  <h6 class="fw-bold pt-1">{{ service.description }}</h6>
+            </div>
+            {% endfor %}
+        </div>
+     <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mb-5">
+            <div class="text-center">
+                <div class="mb-4 mb-xl-0">
+                    <div class="fs-3 fw-bold text-white py-2">Contact us for more information</div>
+                    <a class="btn btn-light btn-lg" href="{% url 'contact' %}">Contact</a>
+                </div>
+            </div>
+     </aside>
+    </div>
+{% endblock content %}
