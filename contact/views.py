@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from utils.common.send_email import mail_send
 from contact.models import ContactFormData
 
 
@@ -19,5 +19,6 @@ def thankyou_contact(request):
         customer_contact.email = email
         customer_contact.phone_number = phone
         customer_contact.message = message
+        mail_send(name, email, phone, message)
         customer_contact.save()
     return render(request, 'contact/thankyou.html')
