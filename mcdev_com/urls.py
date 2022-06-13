@@ -23,4 +23,6 @@ urlpatterns = [
     path('', include('services.urls')),
     path('', include('contact.urls')),
     path('', include('landing_pages.urls')),
+    path('', include('customer_admin.urls')),
+
 ]
