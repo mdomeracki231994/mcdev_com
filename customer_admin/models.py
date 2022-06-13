@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Customers(models.Model):
-    customer_number = models.IntegerField(auto_created=True, primary_key=True, null=False)
+    customer_number = models.AutoField(primary_key=True, null=False)
     customer_name = models.CharField(max_length=50)
     address = models.CharField(max_length=50)
     city = models.CharField(max_length=50)
